@@ -1,0 +1,82 @@
+body {
+    margin: 20px;
+}
+.invoice-input{
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+}
+.section {
+    margin-bottom: 20px;
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+input[type="text"], input[type="number"] ,#invoiceDate {
+    padding: 5px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin: 10px 20px;
+}
+#customerName , #invoiceNumber , #productName {
+    width: 300px;
+}
+#invoiceDate{
+    width: 130px;
+    margin-left: 90px;
+}
+.totals {
+    text-align: right;
+    margin-top: 20px;
+}
+.btn {
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-add {
+    margin-left: 10px;
+    background-color: #1f8136;
+    color: white;
+    border: none;
+}
+.btn-add:hover{
+    background-color: #28a746b6;
+}
+.btn-print {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+#inputSection{
+    display: block;
+}
+.invoice{
+    width: 700px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    background-color:rgb(255, 255, 255);
+    display: none;
+}
+.invoice h4{
+    text-align: center;
+}
+    

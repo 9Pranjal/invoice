@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="inputSection">
+    <div class="invoice-input">
+      <h2>Invoice Generator</h2>
+  
+      <div class="section">
+        <label>Customer Name: <input type="text" id="customerName" /></label><br><br>
+        <label>Invoice Number: <input type="text" id="invoiceNumber" /></label>
+        <label>Date: <input type="date" id="invoiceDate" /></label>
+  
+      </div>
+  
+      <div class="section">
+        <h3>Add Product</h3>
+        
+          <label>Product Name: <input type="text" id="productName" /></label>
+          <label>Qty: <input type="number" id="productQty" /></label>
+          <label>Price: <input type="number" id="productPrice" /></label>
+          <button class="btn btn-add" onclick="addProduct()">Add</button>
+        </div>
+      </div>
+    </div>
+  
+    <table id="invoiceTable">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  
+    <div class="section" id="dis-sec">
+      <label>Discount (%): <input type="number" id="discount" value="0" oninput="updateTotals()" /></label>
+    </div>
+  
+    <div class="totals" id="totals">
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>GST (18%): ₹<span id="gst">0</span></p>
+      <p>Discount: ₹<span id="discountAmt">0</span></p>
+      <h3>Net Total: ₹<span id="netTotal">0</span></h3>
+      <button class="btn btn-print" onclick="GenerateInvoice()">Generate Invoice</button>
+    </div>
+  </div>
+
+  <div class="invoice" id="invoice">
+
+    <h2>INVOICE</h2>
+    <h4>Thank you for your purchase !</h4>
+    <p><strong>Customer Name:</strong> <span id="finalCustomerName"></span></p>
+  <p><strong>Invoice Number:</strong> <span id="finalInvoiceNumber"></span></p>
+  <p><strong>Date:</strong> <span id="finalInvoiceDate"></span></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody id="finalInvoiceTableBody"></tbody>
+  </table>
+
+  <div class="totals">
+    <p>Subtotal: ₹<span id="finalSubtotal">0</span></p>
+    <p>GST (18%): ₹<span id="finalGST">0</span></p>
+    <p>Discount: ₹<span id="finalDiscountAmt">0</span></p>
+    <h3>Net Total: ₹<span id="finalNetTotal">0</span></h3>
+    <button class="btn btn-print" onclick="window.print()">Print Invoice</button>
+  </div>
+
+  <h4>Thank you for your purchase!</h4>
+    <h4>Visit Again</h4>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
